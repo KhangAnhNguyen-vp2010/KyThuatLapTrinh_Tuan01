@@ -85,7 +85,7 @@ void Xoa_PhanTu(int *a, int &n, int giatri)
 void them_PhanTu(int *a, int &n, int x)
 {
 	
-	for (int i = n; i > 1; i--)
+	for (int i = n; i > 0; i--)
 	{
 		a[i]=a[i-1];
 	}
