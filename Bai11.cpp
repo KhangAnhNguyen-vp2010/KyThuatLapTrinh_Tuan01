@@ -3,12 +3,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-
-#include <stdio.h>
-#include <conio.h>
-#include <stdlib.h>
-#include <math.h>
-
 void nhapM1C_SoNguyen (int * &a, int &n)
 {
 	printf("Nhap so phan tu cua mang:");
@@ -28,6 +22,14 @@ void xuatM1C_SoNguyen(int *a, int n)
 
 void Xoa_PhanTu(int *a, int &n, int vitri)
 {
+	if (vitri<0)
+	{
+		vitri=0;
+	}
+	else if (vitri>n-1)
+	{
+		vitri=n-1;
+	}
 	for (int i = vitri; i < n; i++)
 	{
 		a[i]=a[i+1];
@@ -37,6 +39,14 @@ void Xoa_PhanTu(int *a, int &n, int vitri)
 
 void them_PhanTu(int *a, int &n, int giatri, int vitri)
 {
+	if (vitri<0)
+	{
+		vitri=0;
+	}
+	else if (vitri>n-1)
+	{
+		vitri=n-1;
+	}
 	for (int i = n; i > vitri; i--)
 	{
 		a[i]=a[i-1];
@@ -134,4 +144,4 @@ void main()
 	printf("Kiem tra mang xen ke!!!\n");
 	xet_ChanLe_XenKe(a,n);
 	getch();
-}
+}
